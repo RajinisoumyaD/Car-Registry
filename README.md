@@ -67,16 +67,65 @@ car-registry/
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Installation
 
-To deploy and test this system locally:
+To set up and run the Decentralized Car Registry System locally, please follow the instructions below:
 
-1. **Set up Hyperledger Fabric Test Network.**
-2. **Deploy the chaincode (`carcontract.js`).**
-3. **Run the Node.js backend.**
-4. **Serve the frontend files** (can be opened directly or served via a simple HTTP server).
+### 1. Prerequisites
 
-> For details on setting up the Fabric network, refer to the documentation in `chaincode/car-registry/network/README.md`.
+Ensure you have the following installed on your system:
+
+- [Node.js](https://nodejs.org/) (v14 or higher recommended)
+- [npm](https://www.npmjs.com/)
+- [Git](https://git-scm.com/)
+- [Hyperledger Fabric Samples, Binaries, and Docker Images](https://hyperledger-fabric.readthedocs.io/en/release-2.2/install.html) (for local Fabric test network)
+
+### 2. Clone the Repository
+
+```sh
+git clone https://github.com/RajinisoumyaD/Car-Registry.git
+cd Car-Registry
+```
+
+### 3. Set Up the Hyperledger Fabric Test Network
+
+- Navigate to the `chaincode` directory (or the appropriate network setup directory).
+- Follow the instructions in the included README or refer to the [Hyperledger Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-2.2/test_network.html) to start the test network.
+
+### 4. Deploy the Chaincode
+
+- Install and instantiate the `carcontract` chaincode on your local Fabric network as per the standard procedures.
+
+### 5. Install Backend Dependencies
+
+```sh
+cd backend
+npm install
+```
+
+### 6. Configure Environment Variables (if applicable)
+
+- Set up any required environment variables for connecting to Hyperledger Fabric (e.g., wallet paths, connection profiles).
+- Refer to the backend configuration files or `.env.example` if provided.
+
+### 7. Start the Backend Server
+
+```sh
+npm start
+```
+
+- The backend server should now be running and connected to the Fabric network.
+
+### 8. Serve the Frontend Application
+
+- Open the `frontend/index.html` file directly in your web browser, or serve the frontend folder using a simple HTTP server:
+
+```sh
+cd frontend
+npx serve .
+```
+
+- Alternatively, use any static file server of your choice.
 
 ---
 
