@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car Registry</title>
+</head>
+<body>
+  <h1>Decentralized Car Registry</h1>
+
+  <h2>Register Car</h2>
+  <form id="carForm">
+    <input type="text" id="carId" placeholder="Car ID" required />
+    <input type="text" id="model" placeholder="Model" required />
+    <input type="text" id="owner" placeholder="Owner" required />
+    <button type="submit">Register</button>
+  </form>
+
+  <h2>All Cars</h2>
+  <button onclick="getAllCars()">Fetch All</button>
+  <pre id="carList"></pre>
+
+  <h2>Get Car by ID</h2>
+  <input type="text" id="getCarId" placeholder="Enter Car ID" />
+  <button onclick="getCarById()">Get Car</button>
+  <pre id="singleCar"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>
